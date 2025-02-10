@@ -1,96 +1,177 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-image: url("stars.png");
+  overflow-x: hidden;
+  font-family: "Trebuchet MS", sans-serif;
+  color: white;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 1.5vw;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+#wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  margin-top: -1vw;
+  margin-left: -1vw;
+  min-height: 90vh;
+}
+
+#icon {
+  z-index: 11;
+  position: absolute;
+  border-radius: 1.5vw;
+  left: -2vw;
+  top: -2vw;
+  width: 12vw;
+  height: 10vw;
+  background-color: midnightblue;
+}
+
+#icon-outline {
+  z-index: 11;
+  position: absolute;
+  border-radius: 2vw;
+  left: -3vw;
+  top: -3vw;
+  width: 13.25vw;
+  height: 11.25vw;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.35vw;
+}
+
+#navbar {
+  z-index: 10;
+  position: absolute;
+  left: 0vw;
+  top: 0vh;
+  width: 100.1vw;
+  height: 4.2vw;
+  background-color: cornflowerblue;
+}
+
+#main {
+  z-index: 1;
+  position: absolute;
+  left: 3vw;
+  top: 10vw;
+  width: 63vw;
+  height: auto;
+  padding: 1vw;
+  background-color: rgba(240, 248, 255, 0.5);
+  border-radius: 15px;
+}
+
+#menu {
+  z-index: 1;
+  position: absolute;
+  left: 13vw;
+  top: 5.5vw;
+  width: 52vw;
+  height: 3vw;
+  background-color: rgba(240, 248, 255, 0.5);
+  border-radius: 1vw;
+}
+
+#sidebar {
+  z-index: 1;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 27vw;
+  background-color: rgba(240, 248, 255, 0.5);
+  border-radius: 1.5vw;
+}
+
+#sidebar-outline {
+  z-index: 11;
+  position: absolute;
+  left: 69vw;
+  top: 5vw;
+  width: 27vw;
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.35vw;
+}
+
+#footer {
+  z-index: 1;
+  width: 98vw;
+  height: 4vw;
+  background-color: cornflowerblue;
+  border-radius: 1.5vw;
+}
+
+.sb-box {
+  z-index: 2;
+  background-color: rgb(86, 86, 150);
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  padding: 0.5vw 0vw 0.5vw 0.75vw;
+  width: 22vw;
+  border-radius: 1vw;
+}
+
+.sb-box h1 {
+  margin-top: 0vw;
+  margin-right: 1vw;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.post {
+  z-index: 2;
+  background-color: rgb(86, 86, 150);
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  width: 56vw;
+  border-radius: 1.5vw;
 }
 
-.card {
-  padding: 2em;
+.navbutt {
+  font-size: 2vw;
+  float: right;
+  color: white;
+  margin-top: 0.6vw;
+  margin-right: 1vw;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  padding: 0.6vw;
 }
 
-.read-the-docs {
-  color: #888;
+.navbutt:hover {
+  border-radius: 1vw;
+  background-color: midnightblue;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.profdrop {
+    display: none;
+    position: absolute;
+    background-color: midnightblue;
+    left: 73vw;
+    top: 4vw;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    border-radius: 10px;
 }
-button:hover {
-  border-color: #646cff;
+.profdrop a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.profdrop a:hover {
+    background-color: darkslateblue;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+#profbutt:hover + .profdrop {display: inherit;}
+.profdrop:hover {display: inherit;}
+
+
+
