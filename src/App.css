@@ -1,38 +1,105 @@
-.App {
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;     /* Remove default margin */
+  padding: 0;    /* Remove default padding */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+  text-align:inherit;
+  font-size: 12px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loginPage {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  height: 100%;
+  width: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.loginPhotoDiv{
+  margin: auto;
+}
+
+
+.loginDiv{
+background-color: rgba(22, 14, 4, 0.2);
+padding-bottom: 165px;
+padding-top: 25px;
+font-family: 'Times New Roman', Times, serif;
+max-width: 100%;
+max-height: 100%;
+}
+
+.credentialsDiv{
+width: 60%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.loginP{
+  text-align: left;
+}
+
+.loginFieldContainer {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fieldIcon {
+  position: absolute;
+  left: 10px; /* Adjust as needed */
+  color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fields {
+  width: 50%;
+  padding-left: 35px; /* Make space for the icon */
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ccccccd0;
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+}
+
+.loginButton{
+  background-color: #ffd926;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 25%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.loginButton:hover{
+  background-color: #d0b023;
+}
+
+.signUpLink{
+  background-color: #cccccc00;
+  border-color: #cccccc00;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  text-decoration: underline;
+}
+
+.signUpLink:hover{
+  color: #ffd926;
 }

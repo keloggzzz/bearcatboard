@@ -1,26 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Login from "./Components/Login";
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {useState, createContext} from "react";
+
+export const DataContext=createContext("");
+
+
+export default function App() {
+  var login=0; 
+   if(sessionStorage.getItem("logged") != null){
+     login=sessionStorage.getItem("logged")
+   }
+   const [logStatus,setLogStatus]=useState(login);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <DataContext.Provider value={{logStatus:logStatus}}>
+      <div>
+       <BrowserRouter>
+        <Routes>
+          <Route path="/*" element={<Login/>}/>
+          <Route path="/Login" element={<Login/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+    </DataContext.Provider>
+  )
 }
-//Checking to see if updates work
-
-export default App;
