@@ -50,7 +50,7 @@ router.post("/post", authenticateToken, async (req, res) => {
 
 	try {
 	    const result = await pool.query(
-		"INSERT INTO posts (author_id, title, content, nsfw, sensitive) VALUES ($1, $2, $3, false, false) RETURNING id",
+		"INSERT INTO posts (author_id, title, content) VALUES ($1, $2, $3, false, false) RETURNING id",
 		[req.user.id, useTitle, content]
 	    );
 	    res.status(201).json({ result: result.rows[0].id });
